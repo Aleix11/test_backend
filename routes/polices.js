@@ -6,7 +6,7 @@ let middleware = require('../controllers/middleware');
 
 /* GET polices listing. */
 router.get('/byName/:name', middleware.onlyAdmin, policesScripts.getByName);
-router.get('/userByPoliceNumber/:number', middleware.onlyAdmin, policesScripts.getByPoliceNumber);
+router.get('/userByPolicieNumber/:number', middleware.onlyAdmin, policesScripts.getByPoliceNumber);
 
 
 module.exports = router;
