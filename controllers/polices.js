@@ -1,7 +1,6 @@
 const axios = require('axios');
 const usersScripts = require('./users');
 
-
 exports.getByPoliceNumber = async function (req, res) {
     let number = req.params.number;
 
@@ -10,10 +9,7 @@ exports.getByPoliceNumber = async function (req, res) {
     if(policies.error) {
         res.status(404).json(policies.error);
     } else {
-        console.log(policies);
         let user = await usersScripts.getRequest(res, policies.clientId, 'id');
-
-        console.log(user);
 
         if(user.error) {
             res.status(404).json(user.error);
