@@ -26,7 +26,6 @@ exports.onlyAdmin = function (req, res, next) {
     }
 
     let user = JSON.parse(req.headers.authorization);
-
     try {
         if(user.role !== 'admin') {
             return res.status(401).send({
