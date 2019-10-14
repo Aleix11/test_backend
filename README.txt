@@ -2,8 +2,9 @@ Project uploaded in:
 
 https://github.com/Aleix11/test_backend
 
-To run the app execute the following command:
+To run the app execute the following commands:
 
+npm install
 node app.js
 
 The project is structured in the following way:
